@@ -689,6 +689,16 @@ useEffect(() => {
         <Actividades />
         <Gallery />
       </main>
+      <section style={{ padding: "40px" }}>
+  <h2>Noticias</h2>
+
+  {posts.map((post: any) => (
+    <div key={post.id} style={{ marginBottom: "20px" }}>
+      <h3 dangerouslySetInnerHTML={{ __html: post.title.rendered }} />
+      <div dangerouslySetInnerHTML={{ __html: post.excerpt.rendered }} />
+    </div>
+  ))}
+</section>
       <Footer />
       <WhatsAppButton />
     </div>
