@@ -40,7 +40,7 @@ interface Actividad {
 const SLIDES: Slide[] = [
   {
     id: 1,
-    image: "https://drive.google.com/file/d/1QmGQsEwtA4MTBO2PJKsnMP4L8tYP9flV/view?usp=sharing",
+    image: "<img src="/images/Header1.png" />",
     title: "Identidad y Tradición",
     subtitle: "Fortaleciendo nuestras raíces en el corazón de Áncash.",
     cta: "Conoce nuestra historia"
