@@ -313,12 +313,12 @@ const Welcome = () => (
             Leer más sobre nosotros <ArrowRight size={20} />
           </button>
         </motion.div>
-        <motion.div
+  
           initial={{ opacity: 0, scale: 0.9 }}
           whileInView={{ opacity: 1, scale: 1 }}
           viewport={{ once: true }}
           className="relative"
-        >
+        
           <img src="/images/Header1.png" alt="Comunidad Pararín" className="rounded-2xl shadow-2xl" referrerPolicy="no-referrer" />
           />
           <div className="absolute -bottom-6 -right-6 bg-emerald-800 text-white p-6 rounded-xl hidden lg:block">
