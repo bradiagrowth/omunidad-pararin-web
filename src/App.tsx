@@ -690,14 +690,37 @@ useEffect(() => {
         <Gallery />
       </main>
       <section style={{ padding: "40px" }}>
-  <h2>Noticias</h2>
+  <section style={{ padding: "40px" }}>
+  <h2 className="text-3xl font-bold mb-6">Noticias</h2>
 
-  {posts.map((post: any) => (
-    <div key={post.id} style={{ marginBottom: "20px" }}>
-      <h3 dangerouslySetInnerHTML={{ __html: post.title.rendered }} />
-      <div dangerouslySetInnerHTML={{ __html: post.excerpt.rendered }} />
-    </div>
-  ))}
+  <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+    {posts.map((post: any) => (
+      <article
+        key={post.id}
+        className="bg-white rounded-2xl shadow-sm border border-gray-100 p-5 hover:shadow-md transition"
+      >
+        <h3
+          className="text-lg font-semibold mb-3"
+          dangerouslySetInnerHTML={{ __html: post.title.rendered }}
+        />
+
+        <div
+          className="text-sm text-gray-600 leading-relaxed"
+          dangerouslySetInnerHTML={{ __html: post.excerpt.rendered }}
+        />
+
+        <a
+          href={post.link}
+          target="_blank"
+          rel="noreferrer"
+          className="inline-flex items-center mt-4 text-emerald-700 font-medium"
+        >
+          Leer más →
+        </a>
+      </article>
+    ))}
+  </div>
+</section>
 </section>
       <Footer />
       <WhatsAppButton />
