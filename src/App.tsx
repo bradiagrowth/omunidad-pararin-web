@@ -319,11 +319,7 @@ const Welcome = () => (
           viewport={{ once: true }}
           className="relative"
         >
-          <img 
-            src="/images/Header1.png" /" 
-            alt="Comunidad Pararín" 
-            className="rounded-2xl shadow-2xl"
-            referrerPolicy="no-referrer"
+          <img src="/images/Header1.png" alt="Comunidad Pararín" className="rounded-2xl shadow-2xl" referrerPolicy="no-referrer" />
           />
           <div className="absolute -bottom-6 -right-6 bg-emerald-800 text-white p-6 rounded-xl hidden lg:block">
             <p className="text-4xl font-bold">100+</p>
