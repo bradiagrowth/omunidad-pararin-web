@@ -6,11 +6,15 @@
 import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'motion/react';
 import { 
+  
   Menu, X, ChevronRight, ChevronLeft, MapPin, Phone, Mail, 
   Facebook, Instagram, Twitter, MessageCircle, Calendar, 
   Users, Target, History, Award, Image as ImageIcon,
   ArrowRight, ExternalLink
 } from 'lucide-react';
+
+const WP_SITE = "comunidadcampesinadepararin.wordpress.com";
+const WP_API = `https://public-api.wordpress.com/wp/v2/sites/${WP_SITE}`;
 
 // --- Types ---
 interface Slide {
@@ -663,6 +667,17 @@ const WhatsAppButton = () => (
 );
 
 export default function App() {
+  const [posts, setPosts] = useState<any[]>([]);
+
+useEffect(() => {
+  fetch(`${WP_API}/posts`)
+    .then(res => res.json())
+    .then(data => {
+      console.log("Posts WP:", data);
+      setPosts(data);
+    })
+    .catch(err => console.error(err));
+}, []);
   return (
     <div className="min-h-screen font-sans text-stone-900 selection:bg-emerald-100 selection:text-emerald-900">
       <Navbar />
