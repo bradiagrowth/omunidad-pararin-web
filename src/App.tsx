@@ -320,7 +320,7 @@ const Welcome = () => (
           className="relative"
         >
           <img 
-            src="/images/Header1.png" />" 
+            src="/images/Header1.png" /" 
             alt="Comunidad Pararín" 
             className="rounded-2xl shadow-2xl"
             referrerPolicy="no-referrer"
